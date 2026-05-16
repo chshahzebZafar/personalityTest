@@ -1,0 +1,189 @@
+#warning-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff3cd;
+  color: #856404;
+  padding: 1rem;
+  text-align: center;
+  border: 1px solid #ffeeba;
+  border-radius: 4px;
+  margin: 1rem;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+#warning-message:hover {
+  background-color: #fff0c3;
+}
+
+#test-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#webcam,
+#canvas {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+.alert {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 15px 20px;
+  border-radius: 5px;
+  color: white;
+  z-index: 2000;
+  animation: slideIn 0.5s ease-in-out;
+}
+
+.alert-success {
+  background-color: #4caf50;
+}
+
+.alert-warning {
+  background-color: #ff9800;
+}
+
+.alert-error {
+  background-color: #f44336;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.center-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+  padding: 20px;
+}
+
+.start-button {
+  background-color: #4caf50;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.start-button:hover {
+  background-color: #45a049;
+}
+
+.permission-status {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.status-item {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.status-icon {
+  font-size: 1.2em;
+}
+
+.status-granted .status-icon {
+  color: #4caf50;
+}
+
+.status-denied .status-icon {
+  color: #f44336;
+}
+
+.start-button {
+  margin: 20px 0;
+}
+
+.cancel-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px 30px;
+  background-color: #ff4444;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.2s;
+  z-index: 1000;
+  display: none;
+}
+
+.cancel-button:hover {
+  background-color: #ff0000;
+  transform: scale(1.05);
+}
+
+.cancel-button.visible {
+  display: block;
+}
+
+#confirmation-modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 2000;
+  text-align: center;
+}
+
+#confirmation-modal.visible {
+  display: block;
+}
+
+.modal-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.modal-button {
+  padding: 8px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.confirm-button {
+  background-color: #ff4444;
+  color: white;
+}
+
+.cancel-modal-button {
+  background-color: #666;
+  color: white;
+}
